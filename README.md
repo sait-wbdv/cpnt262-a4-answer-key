@@ -21,3 +21,8 @@
     1. Delete image array from `client.js` if necessary.
     2. Create `fetch()` request -> `/api/v0/images`.
     3. Move `.forEach()` loop -> `fetch()` request.
+4. Extra: Implement `dayjs`
+    1. Install `dayjs`
+    2. Load `dayjs` into `server.js`
+    3. Add middleware: `app.use()` -> `response.locals`
+    4. Add current year to `footer.ejs`

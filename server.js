@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const index = require(`./routes/index`);
+const images = require(`./data/images`);
 
 app.set('view engine', `ejs`)
 // runs first
@@ -9,6 +10,10 @@ app.set('view engine', `ejs`)
 app.use(express.static(path.join(__dirname, './public')));
 
 app.use('/', index);
+
+app.get('/api/v0/images', (request, response) => {
+  response.json(images);
+})
 
 app.use(function (request, response) {
   response.status(404).sendFile(path.join(__dirname, 'public', '404.html'));

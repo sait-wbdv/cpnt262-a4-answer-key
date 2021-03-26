@@ -8,7 +8,8 @@
     5. Include partials into pages.
     6. Create views for `login` and `register`.
     7. Create `app.get()` handlers for each view.
-    8. Move routes from `server.js` -> `routes/index`
+    8. Inject page titles into views.
+    9. Move routes from `server.js` -> `routes/index`
         - Move handlers to `routes`
         - Add middleware in `server.js`
 2. Create JSON

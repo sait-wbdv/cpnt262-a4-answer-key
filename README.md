@@ -6,8 +6,9 @@
         - rename `.html` -> `.ejs`
     4. Create partials -> `views/partials`
     5. Include partials into pages.
-    6. Create `app.get()` handlers for each view.
-    7. Move routes from `server.js` -> `routes/index`
+    6. Create views for `login` and `register`.
+    7. Create `app.get()` handlers for each view.
+    8. Move routes from `server.js` -> `routes/index`
         - Move handlers to `routes`
         - Add middleware in `server.js`
 2. Create JSON

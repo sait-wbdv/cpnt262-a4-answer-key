@@ -8,15 +8,15 @@ app.set('view engine', `ejs`)
 app.use(express.static(path.join(__dirname, './public')));
 
 app.get('/', (request, response) => {
-  response.render('pages/index')
+  response.render('pages/index',{pageTitle: "Home Page"})
 })
 
 app.get('/login', (request, response) => {
-  response.render('pages/login')
+  response.render('pages/login',{pageTitle: "Login"})
 })
 
 app.get('/register', (request, response) => {
-  response.render('pages/register')
+  response.render('pages/register',{pageTitle: "Register"})
 })
 
 app.use(function (request, response) {

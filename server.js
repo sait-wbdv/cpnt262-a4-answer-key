@@ -7,8 +7,10 @@ const api = require(`./routes/api-v0`);
 
 app.set('view engine', `ejs`)
 // runs first
+
 app.use((request, response, next) => {
-  response.locals = {currentYear: dayjs('YYYY')}
+  response.locals = {currentYear: dayjs().format('YYYY')}
+  next();
 });
 
 app.use(express.static(path.join(__dirname, './public')));

@@ -7,19 +7,21 @@ app.set('view engine', `ejs`)
 
 app.use(express.static(path.join(__dirname, './public')));
 
-app.get('/', function (request, response) {
+app.get('/', (request, response) => {
+  response.render('pages/index')
+})
 
-  response.send('<h1>Hello World!!</h1>');
+app.get('/login', (request, response) => {
+  response.render('pages/login')
+})
 
-});
-
-
+app.get('/register', (request, response) => {
+  response.render('pages/register')
+})
 
 app.use(function (request, response) {
   response.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
-
-
 
 const PORT = process.env.PORT || 3000;
 
